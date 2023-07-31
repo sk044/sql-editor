@@ -11,6 +11,7 @@ import {
   createTheme,
   ThemeProvider,
   CssBaseline,
+  Skeleton,
 } from '@mui/material';
 import TerminalIcon from '@mui/icons-material/Terminal';
 import { executeSQLQuery } from './utils/utils';
@@ -96,7 +97,23 @@ const App = () => {
       <Container>
 
         <Box mt={2} className='query-form-container'>
-          <Suspense fallback={<CircularProgress />}>
+          <Suspense
+            fallback={
+              <Box>
+              <Skeleton
+                animation="wave"
+                height={280}
+                width="100%"
+                style={{ marginBottom: 0 }}
+              />
+              <Skeleton
+                animation="wave"
+                height={80}
+                width="20%"
+              />
+              </Box>
+              
+            }>
             <QueryForm handleRunQuery={handleRunQuery}  handleClear={handleClear}/>
           </Suspense>
         </Box>
@@ -107,7 +124,14 @@ const App = () => {
           </Box>
         ) : (
           <Box mt={2} className='query-result-container'>
-            <Suspense fallback={<CircularProgress />}>
+            <Suspense
+              fallback={
+                <Box sx={{ width: '100%' }}>
+                  <Skeleton />
+                  <Skeleton animation="wave" />
+                  <Skeleton animation={false} />
+                </Box>
+            }>
               <QueryResult result={queryResult} />
             </Suspense>
           </Box>

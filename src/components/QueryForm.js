@@ -42,7 +42,7 @@ const QueryForm = ({ handleRunQuery, handleClear }) => {
           label="Enter your SQL query"
           variant="outlined"
           multiline
-          rows={4}
+          rows={6}
           value={query}
           onChange={handleQueryChange}
         />
