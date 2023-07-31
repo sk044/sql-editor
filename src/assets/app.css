@@ -1,0 +1,21 @@
+.query-form-container {
+    padding-top: 10%;
+    margin-bottom: 20px;
+  }
+  
+  .loader-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .query-result-container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .query-form-container {
+        padding-top: 20%;
+      }
+  }

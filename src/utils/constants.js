@@ -1,0 +1,1 @@
+export const CSV_DATA = 'https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/customers.csv';
