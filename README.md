@@ -2,6 +2,8 @@
 
 This is a simple SQL editor web application built using React and Material-UI (MUI). The editor allows users to enter SQL queries in the input area, execute the queries (dummy as of now), and view the results in a table format in the result area.
 
+## Demo Link: https://sk044-sql-editor.netlify.app/
+
 ## Overview
 
 The SQL editor consists of two main parts:
